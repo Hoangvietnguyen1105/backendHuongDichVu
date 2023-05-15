@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "8d95e40b-bda3-4293-b319-f9c9f3d754ca",
+		"name": "Hướng Dịch Vụ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23900708"
+	},
+	"item": [
+		{
+			"name": "watch",
+			"item": [
+				{
+					"name": "update watch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Đồng hồ siêu nhân điện quang\",\n    \"isNew\": \"1\",\n    \"oldPrice\": \"300\",\n    \"price\": \"400\",\n    \"description\": \"Đồng hồ có thể biến thành siêu nhân\",\n    \"category\": \"Siêu nhân\",\n    \"image\": \"https://cdn.tgdd.vn/Products/Images/7264/202692/orient-ra-ar0001s10b-nam-co-tu-dong-5-org.jpg\",\n    \"rating\": \"5\",\n    \"id\":\"18\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7569/watch/updateWatch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7569",
+							"path": [
+								"watch",
+								"updateWatch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "thêm 1 watch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Đồng hồ siêu nhân gao",
+									"type": "text"
+								},
+								{
+									"key": "isNew",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "oldPrice",
+									"value": "300",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "400",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Đồng hồ có thể biến thành siêu nhân",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "Siêu nhân",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "https://cdn.tgdd.vn/Products/Images/7264/202692/orient-ra-ar0001s10b-nam-co-tu-dong-5-org.jpg",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "15",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7569/watch/addNewWatch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7569",
+							"path": [
+								"watch",
+								"addNewWatch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all watch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7569/watch/getAllWatch",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7569",
+							"path": [
+								"watch",
+								"getAllWatch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete 1 watch by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:7569/watch/deleteWatch?id=17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7569",
+							"path": [
+								"watch",
+								"deleteWatch"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "17"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "theem 1 user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n         \"name\" :\"Viet\",\n        \"age\" :\"18\",\n        \"gmail\":\"hoangvietnguyen1105@gmail.com\",\n        \"phoneNumber\":\"0979342104\",\n        \"address\":\"ha dong\",\n        \"status\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7568/user/addNewUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7568",
+							"path": [
+								"user",
+								"addNewUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7568/user/deleteUser?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7568",
+							"path": [
+								"user",
+								"deleteUser"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update 1 user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n         \"name\" :\"HoangViet\",\n        \"age\" :\"18\",\n        \"gmail\":\"hoangvietnguyen1105@gmail.com\",\n        \"phoneNumber\":\"0979342104\",\n        \"address\":\"ha dong\",\n        \"status\":\"1\",\n        \"id\":\"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7568/user/updateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7568",
+							"path": [
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7568/user/getAllUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7568",
+							"path": [
+								"user",
+								"getAllUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
